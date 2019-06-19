@@ -4,35 +4,35 @@ function pad(num, size) {
     return s;
 }
 
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition)
-    }
-}
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition)
+//     }
+// }
 
-function showPosition(position) {
-    let lat = position.coords.latitude
-    let lon = position.coords.longitude
+// function showPosition(position) {
+//     let lat = position.coords.latitude
+//     let lon = position.coords.longitude
 
-    // set temperature
+//     // set temperature
 
-    var xhr = new XMLHttpRequest()
-    xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=480a45679a61ae6c07b62ba2cd255960&units=metric', true)
-    xhr.responseType = 'json'
-    xhr.onload = function() {
-        var status = xhr.status
-        if (status === 200) {
-            let temp = xhr.response['main']['temp']
-            let desc = xhr.response['weather'][0]['description']
-            const tempLabel = document.querySelector('.temp')
-            const unitsLabel = document.querySelector('.units')
-            tempLabel.innerHTML = 'The temperature is <strong>' + Math.trunc(temp) + '&deg;</strong> (' + desc + ')'
+//     var xhr = new XMLHttpRequest()
+//     xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=480a45679a61ae6c07b62ba2cd255960&units=metric', true)
+//     xhr.responseType = 'json'
+//     xhr.onload = function() {
+//         var status = xhr.status
+//         if (status === 200) {
+//             let temp = xhr.response['main']['temp']
+//             let desc = xhr.response['weather'][0]['description']
+//             const tempLabel = document.querySelector('.temp')
+//             const unitsLabel = document.querySelector('.units')
+//             tempLabel.innerHTML = 'The temperature is <strong>' + Math.trunc(temp) + '&deg;</strong> (' + desc + ')'
 
-        }
-    }
-    xhr.send();
+//         }
+//     }
+//     xhr.send();
 
-}
+// }
 
 window.onload = function() {
 
@@ -64,7 +64,7 @@ window.onload = function() {
     dateLabel.innerHTML = pad(d.getDay(), 2) + ' ' + month + ', ' + year
 
     // get temp
-    getLocation()
+    // getLocation()
 
     // get articles from dev.to
 
