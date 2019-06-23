@@ -16,12 +16,11 @@ a {
 }
 .container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1120px;
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+    margin: 30px 0 100px 0;
+    height: 100px;
 }
 .web-title {
     font-family: 'Diamond Dust';
@@ -29,6 +28,7 @@ a {
     font-size: 48pt;
     display: block;
     text-shadow: 3px 0 black;
+    float: left;
 }
 .panel {
     display: flex;
@@ -38,6 +38,7 @@ a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    float: right;
 }
 .panel-1 {
     width: 250px;
@@ -52,12 +53,6 @@ a {
     font-size: 12pt;
     margin-top: 10px;
 }
-/* .temp {
-    display: block;
-    font-size: 12pt;
-    color: #888;
-    margin-top: 10px;
-} */
 .articles {
     margin-top: 75px;
     width: 100%;
