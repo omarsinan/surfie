@@ -15,7 +15,7 @@ window.onload = function() {
 
     var d = new Date()
     var day = d.getDate()
-    var hr = d.getHours()
+    var hr = (d.getHours() + 24) % 12 || 12
     var min = d.getMinutes()
     if (min < 10) {
         min = "0" + min
