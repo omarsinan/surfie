@@ -61,16 +61,6 @@ window.onload = function() {
                     title += '...'
                 }
                 clone.getElementsByClassName('title')[0].innerHTML = '<a href="' + xhr1.response[i]['url'] + '">' + title + '</a>'
-                if (xhr1.response[0]['description'] == '') {
-                    clone.getElementsByClassName('desc')[0].style.display = 'none'
-                } else {
-                    var desc = xhr1.response[i]['description']
-                    if (desc.length > 40) {
-                        desc = desc.substring(0, 10)
-                        desc += '...'
-                    }
-                    clone.getElementsByClassName('desc')[0].innerHTML = desc
-                }
                 clone.getElementsByClassName('reaction-count')[0].innerHTML = '<span class="red">&hearts;</span> ' + xhr1.response[i]['positive_reactions_count']
 
                 articles.appendChild(clone)
